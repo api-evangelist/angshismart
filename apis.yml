@@ -1,23 +1,58 @@
 aid: angshismart
+
 name: Angshismart
-description: 'Angshismart is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Shandong Angshi Group Co., Ltd. (Angshismart) is a Chinese manufacturing enterprise specializing in drug packaging materials, industrial products, and related services. The company operates a comprehensive website (angshigroup.com) presenting its product lines, corporate news, and contact information, and it offers APIs for product data and enterprise information as part of its digital services.'
+
 url: https://raw.githubusercontent.com/api-evangelist/angshismart/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
-- Company
-apis: []
+- Manufacturing
+- Pharmaceuticals
+- China
+- Enterprise
+- Angshi
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/angshismart-hosts.yml
+- type: DomainSecurity
+  url: security/angshismart-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/angshismart
+  url: https://www.angshigroup.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine-readable contract was found at the API host.
+  evidence:
+    - url: https://api.angshigroup.com/api-docs
+      status: 404
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
